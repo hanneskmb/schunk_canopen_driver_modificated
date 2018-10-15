@@ -154,7 +154,7 @@ int main(int argc, char** argv)
         chain_handles[i]->getName() << ". Nodes from this group won't be enabled.");
       continue;
     }
-    ROS_INFO_STREAM ("Enabled nodes from chain " << chain_handles[i]->getName());
+    ROS_INFO_STREAM ("Enabled nodes from chain " << chain_handles[i]->getName()); // hannes: evt start of movements
     std::vector<DS301Node::Ptr> nodes = chain_handles[i]->getNodes();
     std::vector<float> targets (nodes.size(), 0.0);
 

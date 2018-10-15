@@ -1,0 +1,343 @@
+Skript gestartet auf Mo 21 Mai 2018 10:20:59 CEST
+bash: /opt/ros/indigo/setup.bash: Datei oder Verzeichnis nicht gefunden
+]0;hannes@hannes-Aspire-E1-572G: ~/catkin_ws/src/schunk_canopen_driver/launch[01;32mhannes@hannes-Aspire-E1-572G[00m:[01;34m~/catkin_ws/src/schunk_canopen_driver/launch[00m$ roslauunch standalone_interpolated_position.launch[A]0;hannes@hannes-Aspire-E1-572G: ~/catkin_ws/src/schunk_canopen_driver/launch[01;32mhannes@hannes-Aspire-E1-572G[00m:[01;34m~/catkin_ws/src/schunk_canopen_driver/launch[00m$ [3Pls
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Croslauunch standalone_interpolated_position.launch
+... logging to /home/hannes/.ros/log/e6092c82-5ccf-11e8-acaa-a4db30c5a756/roslaunch-hannes-Aspire-E1-572G-3475.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;standalone_interpolated_position.launch
+[1mstarted roslaunch server http://hannes-Aspire-E1-572G:33121/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /hardware_control_loop/loop_hz: 125
+ * /hardware_interface/joints: ['arm_1_joint', '...
+ * /joint_limits/arm_1_joint/has_acceleration_limits: True
+ * /joint_limits/arm_1_joint/has_velocity_limits: True
+ * /joint_limits/arm_1_joint/max_acceleration: 6.0
+ * /joint_limits/arm_1_joint/max_velocity: 1.25
+ * /joint_limits/arm_2_joint/has_acceleration_limits: True
+ * /joint_limits/arm_2_joint/has_velocity_limits: True
+ * /joint_limits/arm_2_joint/max_acceleration: 6.0
+ * /joint_limits/arm_2_joint/max_velocity: 1.25
+ * /joint_limits/arm_3_joint/has_acceleration_limits: True
+ * /joint_limits/arm_3_joint/has_velocity_limits: True
+ * /joint_limits/arm_3_joint/max_acceleration: 6.0
+ * /joint_limits/arm_3_joint/max_velocity: 1.25
+ * /joint_limits/arm_4_joint/has_acceleration_limits: True
+ * /joint_limits/arm_4_joint/has_velocity_limits: True
+ * /joint_limits/arm_4_joint/max_acceleration: 6.0
+ * /joint_limits/arm_4_joint/max_velocity: 1.25
+ * /joint_limits/arm_5_joint/has_acceleration_limits: True
+ * /joint_limits/arm_5_joint/has_velocity_limits: True
+ * /joint_limits/arm_5_joint/max_acceleration: 6.0
+ * /joint_limits/arm_5_joint/max_velocity: 1.25
+ * /joint_limits/arm_6_joint/has_acceleration_limits: True
+ * /joint_limits/arm_6_joint/has_velocity_limits: True
+ * /joint_limits/arm_6_joint/max_acceleration: 6.0
+ * /joint_limits/arm_6_joint/max_velocity: 1.25
+ * /joint_state_controller/publish_rate: 50
+ * /joint_state_controller/type: joint_state_contr...
+ * /pos_based_pos_traj_controller_arm/joints: ['arm_1_joint', '...
+ * /pos_based_pos_traj_controller_arm/publish_rate: 50
+ * /pos_based_pos_traj_controller_arm/type: position_controll...
+ * /robot_description: <?xml version="1....
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.13
+ * /schunk_canopen_node/autostart: True
+ * /schunk_canopen_node/can_device_name: auto
+ * /schunk_canopen_node/chain_arm: [3, 4, 5, 6, 7, 8]
+ * /schunk_canopen_node/chain_names: ['arm']
+ * /schunk_canopen_node/frequency: 30
+ * /schunk_canopen_node/node_mapping_3: arm_1_joint
+ * /schunk_canopen_node/node_mapping_4: arm_2_joint
+ * /schunk_canopen_node/node_mapping_5: arm_3_joint
+ * /schunk_canopen_node/node_mapping_6: arm_4_joint
+ * /schunk_canopen_node/node_mapping_7: arm_5_joint
+ * /schunk_canopen_node/node_mapping_8: arm_6_joint
+ * /schunk_canopen_node/ppm_profile_acceleration: 0.3
+ * /schunk_canopen_node/ppm_profile_velocity: 0.3
+ * /schunk_canopen_node/ppm_use_relative_targets: False
+ * /schunk_canopen_node/traj_controller_name: pos_based_pos_tra...
+ * /schunk_canopen_node/use_ros_control: True
+ * /use_sim_time: True
+
+NODES
+  /
+    gazebo (gazebo_ros/gzserver)
+    gazebo_gui (gazebo_ros/gzclient)
+    myrob_spawn (gazebo_ros/spawn_model)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    ros_control_controller_spawner (controller_manager/spawner)
+    schunk_canopen_node (schunk_canopen_driver/schunk_canopen_driver_node)
+
+auto-starting new master
+[1mprocess[master]: started with pid [3495][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;standalone_interpolated_position.launch http://localhost:11311
+[1msetting /run_id to e6092c82-5ccf-11e8-acaa-a4db30c5a756[0m
+[1mprocess[rosout-1]: started with pid [3508][0m
+started core service [/rosout]
+[1mprocess[schunk_canopen_node-2]: started with pid [3532][0m
+[1mprocess[ros_control_controller_spawner-3]: started with pid [3533][0m
+[1mprocess[gazebo-4]: started with pid [3534][0m
+[1mprocess[gazebo_gui-5]: started with pid [3541][0m
+[1mprocess[robot_state_publisher-6]: started with pid [3546][0m
+[1mprocess[myrob_spawn-7]: started with pid [3547][0m
+[INFO] [1526890863.667027, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+<2018-05-21 10:21:04.295> CanOpen(Info)::init: CAN Device was set to auto. 
+[31m[schunk_canopen_node-2] process has died [pid 3532, exit code 133, cmd /opt/ros/kinetic/lib/schunk_canopen_driver/schunk_canopen_driver_node __name:=schunk_canopen_node __log:=/home/hannes/.ros/log/e6092c82-5ccf-11e8-acaa-a4db30c5a756/schunk_canopen_node-2.log].
+log file: /home/hannes/.ros/log/e6092c82-5ccf-11e8-acaa-a4db30c5a756/schunk_canopen_node-2*.log[0m
+[0m[ INFO] [1526890872.498227779]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1526890872.498977820]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+terminate called after throwing an instance of 'boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >'
+terminate called recursively
+SpawnModel script started
+[INFO] [1526890876.898579, 0.000000]: Loading model XML from ros parameter
+[INFO] [1526890876.903006, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+Aborted (core dumped)
+[31m[gazebo-4] process has died [pid 3534, exit code 134, cmd /opt/ros/kinetic/lib/gazebo_ros/gzserver -e ode /opt/ros/kinetic/share/schunk_canopen_driver/world/test.world __name:=gazebo __log:=/home/hannes/.ros/log/e6092c82-5ccf-11e8-acaa-a4db30c5a756/gazebo-4.log].
+log file: /home/hannes/.ros/log/e6092c82-5ccf-11e8-acaa-a4db30c5a756/gazebo-4*.log[0m
+[33m[WARN] [1526890893.892860, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+[0m[1m[ros_control_controller_spawner-3] process has finished cleanly
+log file: /home/hannes/.ros/log/e6092c82-5ccf-11e8-acaa-a4db30c5a756/ros_control_controller_spawner-3*.log[0m
+^C[myrob_spawn-7] killing on exit
+[robot_state_publisher-6] killing on exit
+[gazebo_gui-5] killing on exit
+Traceback (most recent call last):
+  File "/opt/ros/kinetic/lib/gazebo_ros/spawn_model", line 313, in <module>
+    sm.callSpawnService()
+  File "/opt/ros/kinetic/lib/gazebo_ros/spawn_model", line 271, in callSpawnService
+    initial_pose, self.reference_frame, self.gazebo_namespace)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/gazebo_ros/gazebo_interface.py", line 28, in spawn_urdf_model_client
+    rospy.wait_for_service(gazebo_namespace+'/spawn_urdf_model')
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_service.py", line 159, in wait_for_service
+    raise ROSInterruptException("rospy shutdown")
+rospy.exceptions.ROSInterruptException: rospy shutdown
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
+]0;hannes@hannes-Aspire-E1-572G: ~/catkin_ws/src/schunk_canopen_driver/launch[01;32mhannes@hannes-Aspire-E1-572G[00m:[01;34m~/catkin_ws/src/schunk_canopen_driver/launch[00m$ roslauunch standalone_interpolated_position.launch
+... logging to /home/hannes/.ros/log/22ceb998-5cd0-11e8-acaa-a4db30c5a756/roslaunch-hannes-Aspire-E1-572G-4176.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;standalone_interpolated_position.launch
+[1mstarted roslaunch server http://hannes-Aspire-E1-572G:42659/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /hardware_control_loop/loop_hz: 125
+ * /hardware_interface/joints: ['arm_1_joint', '...
+ * /joint_limits/arm_1_joint/has_acceleration_limits: True
+ * /joint_limits/arm_1_joint/has_velocity_limits: True
+ * /joint_limits/arm_1_joint/max_acceleration: 6.0
+ * /joint_limits/arm_1_joint/max_velocity: 1.25
+ * /joint_limits/arm_2_joint/has_acceleration_limits: True
+ * /joint_limits/arm_2_joint/has_velocity_limits: True
+ * /joint_limits/arm_2_joint/max_acceleration: 6.0
+ * /joint_limits/arm_2_joint/max_velocity: 1.25
+ * /joint_limits/arm_3_joint/has_acceleration_limits: True
+ * /joint_limits/arm_3_joint/has_velocity_limits: True
+ * /joint_limits/arm_3_joint/max_acceleration: 6.0
+ * /joint_limits/arm_3_joint/max_velocity: 1.25
+ * /joint_limits/arm_4_joint/has_acceleration_limits: True
+ * /joint_limits/arm_4_joint/has_velocity_limits: True
+ * /joint_limits/arm_4_joint/max_acceleration: 6.0
+ * /joint_limits/arm_4_joint/max_velocity: 1.25
+ * /joint_limits/arm_5_joint/has_acceleration_limits: True
+ * /joint_limits/arm_5_joint/has_velocity_limits: True
+ * /joint_limits/arm_5_joint/max_acceleration: 6.0
+ * /joint_limits/arm_5_joint/max_velocity: 1.25
+ * /joint_limits/arm_6_joint/has_acceleration_limits: True
+ * /joint_limits/arm_6_joint/has_velocity_limits: True
+ * /joint_limits/arm_6_joint/max_acceleration: 6.0
+ * /joint_limits/arm_6_joint/max_velocity: 1.25
+ * /joint_state_controller/publish_rate: 50
+ * /joint_state_controller/type: joint_state_contr...
+ * /pos_based_pos_traj_controller_arm/joints: ['arm_1_joint', '...
+ * /pos_based_pos_traj_controller_arm/publish_rate: 50
+ * /pos_based_pos_traj_controller_arm/type: position_controll...
+ * /robot_description: <?xml version="1....
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.13
+ * /schunk_canopen_node/autostart: True
+ * /schunk_canopen_node/can_device_name: auto
+ * /schunk_canopen_node/chain_arm: [3, 4, 5, 6, 7, 8]
+ * /schunk_canopen_node/chain_names: ['arm']
+ * /schunk_canopen_node/frequency: 30
+ * /schunk_canopen_node/node_mapping_3: arm_1_joint
+ * /schunk_canopen_node/node_mapping_4: arm_2_joint
+ * /schunk_canopen_node/node_mapping_5: arm_3_joint
+ * /schunk_canopen_node/node_mapping_6: arm_4_joint
+ * /schunk_canopen_node/node_mapping_7: arm_5_joint
+ * /schunk_canopen_node/node_mapping_8: arm_6_joint
+ * /schunk_canopen_node/ppm_profile_acceleration: 0.3
+ * /schunk_canopen_node/ppm_profile_velocity: 0.3
+ * /schunk_canopen_node/ppm_use_relative_targets: False
+ * /schunk_canopen_node/traj_controller_name: pos_based_pos_tra...
+ * /schunk_canopen_node/use_ros_control: True
+ * /use_sim_time: True
+
+NODES
+  /
+    gazebo (gazebo_ros/gzserver)
+    gazebo_gui (gazebo_ros/gzclient)
+    myrob_spawn (gazebo_ros/spawn_model)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    ros_control_controller_spawner (controller_manager/spawner)
+    schunk_canopen_node (schunk_canopen_driver/schunk_canopen_driver_node)
+
+auto-starting new master
+[1mprocess[master]: started with pid [4196][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;standalone_interpolated_position.launch http://localhost:11311
+[1msetting /run_id to 22ceb998-5cd0-11e8-acaa-a4db30c5a756[0m
+[1mprocess[rosout-1]: started with pid [4209][0m
+started core service [/rosout]
+[1mprocess[schunk_canopen_node-2]: started with pid [4233][0m
+[1mprocess[ros_control_controller_spawner-3]: started with pid [4234][0m
+[1mprocess[gazebo-4]: started with pid [4235][0m
+[1mprocess[gazebo_gui-5]: started with pid [4249][0m
+[1mprocess[robot_state_publisher-6]: started with pid [4260][0m
+[1mprocess[myrob_spawn-7]: started with pid [4275][0m
+<2018-05-21 10:22:45.021> CanOpen(Info)::init: CAN Device was set to auto. 
+[31m[schunk_canopen_node-2] process has died [pid 4233, exit code 133, cmd /opt/ros/kinetic/lib/schunk_canopen_driver/schunk_canopen_driver_node __name:=schunk_canopen_node __log:=/home/hannes/.ros/log/22ceb998-5cd0-11e8-acaa-a4db30c5a756/schunk_canopen_node-2.log].
+log file: /home/hannes/.ros/log/22ceb998-5cd0-11e8-acaa-a4db30c5a756/schunk_canopen_node-2*.log[0m
+[INFO] [1526890965.400137, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[0m[ INFO] [1526890965.422887748]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1526890965.423950752]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+SpawnModel script started
+[INFO] [1526890965.960599, 0.000000]: Loading model XML from ros parameter
+[INFO] [1526890965.963423, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+terminate called after throwing an instance of 'boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >'
+  what():  boost: mutex lock failed in pthread_mutex_lock: Invalid argument
+Aborted (core dumped)
+[31m[gazebo-4] process has died [pid 4235, exit code 134, cmd /opt/ros/kinetic/lib/gazebo_ros/gzserver -e ode /opt/ros/kinetic/share/schunk_canopen_driver/world/test.world __name:=gazebo __log:=/home/hannes/.ros/log/22ceb998-5cd0-11e8-acaa-a4db30c5a756/gazebo-4.log].
+log file: /home/hannes/.ros/log/22ceb998-5cd0-11e8-acaa-a4db30c5a756/gazebo-4*.log[0m
+^C[myrob_spawn-7] killing on exit
+[robot_state_publisher-6] killing on exit
+[gazebo_gui-5] killing on exit
+[ros_control_controller_spawner-3] killing on exit
+[33m[WARN] [1526890978.043998, 0.000000]: Controller Spawner couldn't find the expected controller_manager ROS interface.
+[0mTraceback (most recent call last):
+  File "/opt/ros/kinetic/lib/gazebo_ros/spawn_model", line 313, in <module>
+    sm.callSpawnService()
+  File "/opt/ros/kinetic/lib/gazebo_ros/spawn_model", line 271, in callSpawnService
+    initial_pose, self.reference_frame, self.gazebo_namespace)
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/gazebo_ros/gazebo_interface.py", line 28, in spawn_urdf_model_client
+    rospy.wait_for_service(gazebo_namespace+'/spawn_urdf_model')
+  File "/opt/ros/kinetic/lib/python2.7/dist-packages/rospy/impl/tcpros_service.py", line 159, in wait_for_service
+    raise ROSInterruptException("rospy shutdown")
+rospy.exceptions.ROSInterruptException: rospy shutdown
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
+]0;hannes@hannes-Aspire-E1-572G: ~/catkin_ws/src/schunk_canopen_driver/launch[01;32mhannes@hannes-Aspire-E1-572G[00m:[01;34m~/catkin_ws/src/schunk_canopen_driver/launch[00m$ roslauunch standalone_interpolated_position.launch
+... logging to /home/hannes/.ros/log/33581a0c-5cd0-11e8-acaa-a4db30c5a756/roslaunch-hannes-Aspire-E1-572G-4541.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;standalone_interpolated_position.launch
+[1mstarted roslaunch server http://hannes-Aspire-E1-572G:43973/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /hardware_control_loop/loop_hz: 125
+ * /hardware_interface/joints: ['arm_1_joint', '...
+ * /joint_limits/arm_1_joint/has_acceleration_limits: True
+ * /joint_limits/arm_1_joint/has_velocity_limits: True
+ * /joint_limits/arm_1_joint/max_acceleration: 6.0
+ * /joint_limits/arm_1_joint/max_velocity: 1.25
+ * /joint_limits/arm_2_joint/has_acceleration_limits: True
+ * /joint_limits/arm_2_joint/has_velocity_limits: True
+ * /joint_limits/arm_2_joint/max_acceleration: 6.0
+ * /joint_limits/arm_2_joint/max_velocity: 1.25
+ * /joint_limits/arm_3_joint/has_acceleration_limits: True
+ * /joint_limits/arm_3_joint/has_velocity_limits: True
+ * /joint_limits/arm_3_joint/max_acceleration: 6.0
+ * /joint_limits/arm_3_joint/max_velocity: 1.25
+ * /joint_limits/arm_4_joint/has_acceleration_limits: True
+ * /joint_limits/arm_4_joint/has_velocity_limits: True
+ * /joint_limits/arm_4_joint/max_acceleration: 6.0
+ * /joint_limits/arm_4_joint/max_velocity: 1.25
+ * /joint_limits/arm_5_joint/has_acceleration_limits: True
+ * /joint_limits/arm_5_joint/has_velocity_limits: True
+ * /joint_limits/arm_5_joint/max_acceleration: 6.0
+ * /joint_limits/arm_5_joint/max_velocity: 1.25
+ * /joint_limits/arm_6_joint/has_acceleration_limits: True
+ * /joint_limits/arm_6_joint/has_velocity_limits: True
+ * /joint_limits/arm_6_joint/max_acceleration: 6.0
+ * /joint_limits/arm_6_joint/max_velocity: 1.25
+ * /joint_state_controller/publish_rate: 50
+ * /joint_state_controller/type: joint_state_contr...
+ * /pos_based_pos_traj_controller_arm/joints: ['arm_1_joint', '...
+ * /pos_based_pos_traj_controller_arm/publish_rate: 50
+ * /pos_based_pos_traj_controller_arm/type: position_controll...
+ * /robot_description: <?xml version="1....
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.13
+ * /schunk_canopen_node/autostart: True
+ * /schunk_canopen_node/can_device_name: auto
+ * /schunk_canopen_node/chain_arm: [3, 4, 5, 6, 7, 8]
+ * /schunk_canopen_node/chain_names: ['arm']
+ * /schunk_canopen_node/frequency: 30
+ * /schunk_canopen_node/node_mapping_3: arm_1_joint
+ * /schunk_canopen_node/node_mapping_4: arm_2_joint
+ * /schunk_canopen_node/node_mapping_5: arm_3_joint
+ * /schunk_canopen_node/node_mapping_6: arm_4_joint
+ * /schunk_canopen_node/node_mapping_7: arm_5_joint
+ * /schunk_canopen_node/node_mapping_8: arm_6_joint
+ * /schunk_canopen_node/ppm_profile_acceleration: 0.3
+ * /schunk_canopen_node/ppm_profile_velocity: 0.3
+ * /schunk_canopen_node/ppm_use_relative_targets: False
+ * /schunk_canopen_node/traj_controller_name: pos_based_pos_tra...
+ * /schunk_canopen_node/use_ros_control: True
+ * /use_sim_time: True
+
+NODES
+  /
+    gazebo (gazebo_ros/gzserver)
+    gazebo_gui (gazebo_ros/gzclient)
+    myrob_spawn (gazebo_ros/spawn_model)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    ros_control_controller_spawner (controller_manager/spawner)
+    schunk_canopen_node (schunk_canopen_driver/schunk_canopen_driver_node)
+
+auto-starting new master
+[1mprocess[master]: started with pid [4561][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;standalone_interpolated_position.launch http://localhost:11311
+[1msetting /run_id to 33581a0c-5cd0-11e8-acaa-a4db30c5a756[0m
+[1mprocess[rosout-1]: started with pid [4574][0m
+started core service [/rosout]
+[1mprocess[schunk_canopen_node-2]: started with pid [4598][0m
+[1mprocess[ros_control_controller_spawner-3]: started with pid [4599][0m
+[1mprocess[gazebo-4]: started with pid [4600][0m
+[1mprocess[gazebo_gui-5]: started with pid [4607][0m
+[1mprocess[robot_state_publisher-6]: started with pid [4619][0m
+[1mprocess[myrob_spawn-7]: started with pid [4625][0m
+<2018-05-21 10:23:12.785> CanOpen(Info)::init: CAN Device was set to auto. 
+[31m[schunk_canopen_node-2] process has died [pid 4598, exit code 133, cmd /opt/ros/kinetic/lib/schunk_canopen_driver/schunk_canopen_driver_node __name:=schunk_canopen_node __log:=/home/hannes/.ros/log/33581a0c-5cd0-11e8-acaa-a4db30c5a756/schunk_canopen_node-2.log].
+log file: /home/hannes/.ros/log/33581a0c-5cd0-11e8-acaa-a4db30c5a756/schunk_canopen_node-2*.log[0m
+[INFO] [1526890993.127255, 0.000000]: Controller Spawner: Waiting for service controller_manager/load_controller
+[0m[ INFO] [1526890993.199332893]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[ INFO] [1526890993.200052689]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+SpawnModel script started
+[INFO] [1526890993.699870, 0.000000]: Loading model XML from ros parameter
+[INFO] [1526890993.703605, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+terminate called after throwing an instance of 'boost::exception_detail::clone_impl<boost::exception_detail::error_info_injector<boost::lock_error> >'
+  what():  boost: mutex lock failed in pthread_mutex_lock: Invalid argument
+Aborted (core dumped)
+[31m[gazebo-4] process has died [pid 4600, exit code 134, cmd /opt/ros/kinetic/lib/gazebo_ros/gzserver -e ode /opt/ros/kinetic/share/schunk_canopen_driver/world/test.world

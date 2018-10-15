@@ -6,15 +6,45 @@
   for handling the robot.
  -->
 <launch>
+<!-- Hannes include plugin 
 
-  <!-- Trajectory controller should be set by the driver launch file -->
-  <arg name="trajectory_controller_name" />
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find schunk_canopen_driver)/world/test.world"/>    
+</include> 
+-->
 
-  <!-- Load controller settings -->
-  <rosparam file="$(find schunk_canopen_driver)/config/arm_controllers.yaml" command="load"/>
 
-  <!-- spawn controller manager -->
+ <!--Load controller settings -->
+parameter server
+  <rosparam file="$(find schunk_canopen_driver)/config/arm_controllers.yaml" command="load" ns="myrob"/>
+<!-- ns added hannes -->
+ 
+<!-- load the controllers -->
+  <node name="controller_spawner"
+    pkg="controller_manager"
+    type="spawner" respawn="false"
+    output="screen" ns="/myrob"
+    args="joint_state_controller
+     pos_based_pos_traj_controller_arm"
+     />
+  <!--output="screen" ns="/myrob"-->
+<!--hannes: load controller added -->
+
+
+ <!-- Trajectory controller should be set by the driver launch file -->
+  <arg name="trajectory_controller_name"  
+default="pos_based_pos_traj_controller_arm" />   <!--  Hannes: default added  >
+
+
+
+    <!- more default parameters can be changed here -->
+  
+
+<!--hannes: could not find controller manager error is away with deleting spawn controller manager, mabye a mistake with a wrong namespace -->
+
+
+  <!-- spawn controller manager 
   <node name="ros_control_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
     output="screen" args="$(arg trajectory_controller_name)" />
-
+-->
 </launch>

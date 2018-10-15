@@ -18,11 +18,14 @@
   <!-- Automatically start the arm so it can be used right away -->
   <arg name="do_autostart" default="true" />
   <!-- Give a name for the trajectory controller to use (in default case) -->
-  <arg name="trajectory_controller_name" default="pos_based_pos_traj_controller" />
+ <arg name="trajectory_controller_name" default="pos_based_pos_traj_controller" />
 
+                     <!-- Hannes: with or without pos_...controller_ARM ??? arm added -->
+  
 
   <!-- Joint limits for the speed and acceleration of individual joints -->
-  <rosparam command="load" file="$(find schunk_canopen_driver)/config/joint_limits.yaml"/>
+  <rosparam command="load" file="$(find schunk_canopen_driver)/config/joint_limits.yaml" ns="myrob"/>
+<!-- hannes: added ns = myrob -->
 
   <!-- The actual driver node -->
   <node name="schunk_canopen_node" pkg="schunk_canopen_driver" type="schunk_canopen_driver_node" output="screen" launch-prefix="$(arg launch_prefix)">
@@ -34,8 +37,9 @@
     <param name="use_ros_control" type="bool" value="$(arg with_ros_control)"/>
     <param name="traj_controller_name" type="string" value="$(arg trajectory_controller_name)"/>
     <!-- Config files to indicate what CanOpen Nodes to start -->
-    <rosparam command="load" file="$(find schunk_canopen_driver)/config/example_config.yaml"/>
-    <rosparam command="load" file="$(find schunk_canopen_driver)/config/node_mapping.yaml"/>
+    <rosparam command="load" file="$(find schunk_canopen_driver)/config/example_config.yaml" ns="myrob"/>
+    <rosparam command="load" file="$(find schunk_canopen_driver)/config/node_mapping.yaml" ns="myrob"/>
+<!-- hannes: added ns = myrob -->
 
   </node>
 </launch>

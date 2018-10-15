@@ -1,0 +1,167 @@
+Skript gestartet auf Mi 25 Apr 2018 10:12:21 CEST
+]0;hannes@hannes-Aspire-E1-572G: ~/catkin_ws/schunk_canopen_driver/launch[01;32mhannes@hannes-Aspire-E1-572G[00m:[01;34m~/catkin_ws/schunk_canopen_driver/launch[00m$ exitroslaunch  /home/hannes/catkin_ws/schunk_canopen_driver/launch/move_to_home_position.launchh 
+... logging to /home/hannes/.ros/log/6293405a-4860-11e8-ba26-c1e99b4db0b3/roslaunch-hannes-Aspire-E1-572G-2595.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/hannes/catkin_ws/schunk_canopen_driver/launch/move_to_home_position.launch
+[1mstarted roslaunch server http://hannes-Aspire-E1-572G:41173/[0m
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.13
+ * /schunk_canopen_node/can_device_name: auto
+ * /schunk_canopen_node/chain_arm: [3, 4, 5, 6, 7, 8]
+ * /schunk_canopen_node/chain_names: ['arm']
+ * /schunk_canopen_node/frequency: 30
+ * /schunk_canopen_node/node_mapping_3: arm_1_joint
+ * /schunk_canopen_node/node_mapping_4: arm_2_joint
+ * /schunk_canopen_node/node_mapping_5: arm_3_joint
+ * /schunk_canopen_node/node_mapping_6: arm_4_joint
+ * /schunk_canopen_node/node_mapping_7: arm_5_joint
+ * /schunk_canopen_node/node_mapping_8: arm_6_joint
+ * /schunk_canopen_node/ppm_profile_acceleration: 0.3
+ * /schunk_canopen_node/ppm_profile_velocity: 0.3
+ * /schunk_canopen_node/ppm_use_relative_targets: False
+
+NODES
+  /
+    schunk_canopen_node (schunk_canopen_driver/schunk_canopen_driver_move_home_node)
+
+auto-starting new master
+[1mprocess[master]: started with pid [2605][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/hannes/catkin_ws/schunk_canopen_driver/launch/move_to_home_position.launch http://localhost:11311
+[1msetting /run_id to 6293405a-4860-11e8-ba26-c1e99b4db0b3[0m
+[1mprocess[rosout-1]: started with pid [2618][0m
+started core service [/rosout]
+[1mprocess[schunk_canopen_node-2]: started with pid [2630][0m
+WARNING: Logging Instance is null, did you initialize the logging framework?
+You should initialize the logging framework at the beginning of your program. This will also enable setting the log level on the command line.
+<2018-04-25 10:12:24.752> CanOpen(Info)::init: Found pcanusb32
+flags:2050
+<2018-04-25 10:12:24.752> CanOpen(Info)::init: CAN Device was set to auto. 
+<2018-04-25 10:12:24.752> CanOpen(Info)::init: Trying CAN device: /dev/pcanusb32... 
+Can Init successful!
+<2018-04-25 10:12:25.933> CAN(Info) tCanDevice(PEAK-CAN)::tCanDeviceT: Opened device /dev/pcanusb32 -> 31464656
+[0m[ INFO] [1524643945.933641057]: Can device identifier: auto[0m
+[0m[ INFO] [1524643945.933718413]: Found 1 chains[0m
+[0m[ INFO] [1524643945.934819138]: Found chain with name chain_arm and 6 nodes[0m
+<2018-04-25 10:12:25.934> CanOpen(Info)::addNode: Adding new DS402Node with id 3
+<2018-04-25 10:12:25.935> CanOpen(Info)::addNode: Adding new DS402Node with id 4
+<2018-04-25 10:12:25.936> CanOpen(Info)::addNode: Adding new DS402Node with id 5
+<2018-04-25 10:12:25.937> CanOpen(Info)::addNode: Adding new DS402Node with id 6
+<2018-04-25 10:12:25.938> CanOpen(Info)::addNode: Adding new DS402Node with id 7
+<2018-04-25 10:12:25.939> CanOpen(Info)::addNode: Adding new DS402Node with id 8
+<2018-04-25 10:12:25.949> CanOpen(Warning) NMT::update: NMT Nodeguarding for node 4 detected a failure! State is supposed to be: initialisation but was detected as operational. State changed.
+<2018-04-25 10:12:25.976> CanOpen(Warning) NMT::update: NMT Nodeguarding for node 5 detected a failure! State is supposed to be: initialisation but was detected as operational. State changed.
+<2018-04-25 10:12:25.978> CanOpen(Warning) NMT::update: NMT Nodeguarding for node 3 detected a failure! State is supposed to be: initialisation but was detected as operational. State changed.
+<2018-04-25 10:12:25.991> CanOpen(Error) EMCY::update: EMCY message states that an error in node 3 occured: 
+CANopen device software - generic error
+Internal software - generic
+
+Error registers: Generic error, Device profile specific, manufacturer-specific, 
+Manufacturer specific code: 0xe1 0x00 0x00 0x00 0x00 
+<2018-04-25 10:12:25.993> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 3 is now in state error free.
+<2018-04-25 10:12:25.996> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_PROFILE_POSITION_MODE for node 3
+<2018-04-25 10:12:25.996> CanOpen(Info)::commutationSearch: Commutation search for node  3
+<2018-04-25 10:12:26.000> CanOpen(Info)::commutationSearch: Initially, node is at position 7
+<2018-04-25 10:12:26.005> CanOpen(Info)::initDS402State: Node 3 reached state SWITCH ON DISABLED
+<2018-04-25 10:12:26.008> CanOpen(Info)::initDS402State: Node 3 reached state READY TO SWITCH ON
+<2018-04-25 10:12:26.012> CanOpen(Info)::initDS402State: Node 3 reached state SWITCHED ON
+<2018-04-25 10:12:26.012> CanOpen(Info)::commutationSearch: Commutation search for node 3 was successful!
+<2018-04-25 10:12:26.014> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_PROFILE_POSITION_MODE for node 3
+<2018-04-25 10:12:26.060> CanOpen(Error) EMCY::update: EMCY message states that an error in node 4 occured: 
+CANopen device software - generic error
+Internal software - generic
+
+Error registers: Generic error, Device profile specific, manufacturer-specific, 
+Manufacturer specific code: 0xe1 0x00 0x00 0x00 0x00 
+<2018-04-25 10:12:26.062> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 4 is now in state error free.
+<2018-04-25 10:12:26.064> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_PROFILE_POSITION_MODE for node 4
+<2018-04-25 10:12:26.065> CanOpen(Info)::commutationSearch: Commutation search for node  4
+<2018-04-25 10:12:26.069> CanOpen(Info)::commutationSearch: Initially, node is at position -14
+<2018-04-25 10:12:26.074> CanOpen(Info)::initDS402State: Node 4 reached state SWITCH ON DISABLED
+<2018-04-25 10:12:26.079> CanOpen(Info)::initDS402State: Node 4 reached state READY TO SWITCH ON
+<2018-04-25 10:12:26.082> CanOpen(Info)::initDS402State: Node 4 reached state SWITCHED ON
+<2018-04-25 10:12:26.082> CanOpen(Info)::commutationSearch: Commutation search for node 4 was successful!
+<2018-04-25 10:12:26.085> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_PROFILE_POSITION_MODE for node 4
+<2018-04-25 10:12:26.136> CanOpen(Error) EMCY::update: EMCY message states that an error in node 5 occured: 
+CANopen device software - generic error
+Internal software - generic
+
+Error registers: Generic error, Device profile specific, manufacturer-specific, 
+Manufacturer specific code: 0xe1 0x00 0x00 0x00 0x00 
+<2018-04-25 10:12:26.138> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 5 is now in state error free.
+<2018-04-25 10:12:26.142> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_PROFILE_POSITION_MODE for node 5
+<2018-04-25 10:12:26.142> CanOpen(Info)::commutationSearch: Commutation search for node  5
+<2018-04-25 10:12:26.145> CanOpen(Info)::commutationSearch: Initially, node is at position 1
+<2018-04-25 10:12:26.149> CanOpen(Info)::initDS402State: Node 5 reached state SWITCH ON DISABLED
+<2018-04-25 10:12:26.154> CanOpen(Info)::initDS402State: Node 5 reached state READY TO SWITCH ON
+<2018-04-25 10:12:26.156> CanOpen(Info)::initDS402State: Node 5 reached state SWITCHED ON
+<2018-04-25 10:12:26.172> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_INTERPOLATED_POSITION_MODE for node 5
+<2018-04-25 10:12:26.175> CanOpen(Info)::initDS402State: Node 5 reached state OPERATION ENABLED
+<2018-04-25 10:12:26.175> CanOpen(Info)::commutationSearch: Activated commutation search for node 5
+<2018-04-25 10:12:26.322> CAN(Error)::CanDeviceReceive: CAN ERROR DETECTED:  no error code given in an error message....check protocol
+<2018-04-25 10:12:28.087> CanOpen(Info)::initDS402State: Node 5 reached state SWITCHED ON
+<2018-04-25 10:12:28.087> CanOpen(Info)::commutationSearch: Commutation search for node 5 was successful!
+<2018-04-25 10:12:28.089> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_PROFILE_POSITION_MODE for node 5
+<2018-04-25 10:12:28.139> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_PROFILE_POSITION_MODE for node 6
+<2018-04-25 10:12:28.139> CanOpen(Info)::commutationSearch: Commutation search for node  6
+<2018-04-25 10:12:28.144> CanOpen(Info)::commutationSearch: Initially, node is at position 0
+<2018-04-25 10:12:28.150> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.150> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.151> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.151> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.153> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.153> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.155> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.155> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.157> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.157> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.159> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.159> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.161> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.161> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.164> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.164> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.165> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.165> CanOpen(Error) DS402Node::initDS402State: Landed in FAULT state while performing transition to state SWITCHED ON. Starting all over again...
+<2018-04-25 10:12:28.167> CanOpen(Info)::initDS402State: Node 6 reached state FAULT
+<2018-04-25 10:12:28.169> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 6 is now in state error free.
+<2018-04-25 10:12:28.173> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 6 is now in state error free.
+<2018-04-25 10:12:28.272> CanOpen(Error) DS402Node::resetFault: Could not perform fault reset for node 6. Possibly the reason for entering the fault state still exists.
+<2018-04-25 10:12:28.287> CanOpen(Info)::setModeOfOperation: Initialized mode MOO_INTERPOLATED_POSITION_MODE for node 6
+<2018-04-25 10:12:28.289> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 6 is now in state error free.
+<2018-04-25 10:12:28.393> CanOpen(Error) DS402Node::resetFault: Could not perform fault reset for node 6. Possibly the reason for entering the fault state still exists.
+<2018-04-25 10:12:28.394> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 6 is now in state error free.
+<2018-04-25 10:12:28.498> CanOpen(Error) DS402Node::resetFault: Could not perform fault reset for node 6. Possibly the reason for entering the fault state still exists.
+<2018-04-25 10:12:28.500> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 6 is now in state error free.
+<2018-04-25 10:12:28.603> CanOpen(Error) DS402Node::resetFault: Could not perform fault reset for node 6. Possibly the reason for entering the fault state still exists.
+<2018-04-25 10:12:28.604> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 6 is now in state error free.
+<2018-04-25 10:12:28.707> CanOpen(Error) DS402Node::resetFault: Could not perform fault reset for node 6. Possibly the reason for entering the fault state still exists.
+<2018-04-25 10:12:28.708> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 6 is now in state error free.
+<2018-04-25 10:12:28.812> CanOpen(Error) DS402Node::resetFault: Could not perform fault reset for node 6. Possibly the reason for entering the fault state still exists.
+<2018-04-25 10:12:28.812> CanOpen(Info)::initDS402State: Unable to reset from fault state after 5 tries. Trying to do a hard reset on the device.
+<2018-04-25 10:12:28.914> CanOpen(Info) EMCY::update: Error reset EMCY received. Node 6 is now in state error free.
+<2018-04-25 10:12:29.016> CanOpen(Error) DS402Node::resetFault: Could not perform fault reset for node 6. Possibly the reason for entering the fault state still exists.
+terminate called after throwing an instance of 'icl_hardware::canopen_schunk::DeviceException'
+  what():  xۢ
+[31m[schunk_canopen_node-2] process has died [pid 2630, exit code -6, cmd /opt/ros/kinetic/lib/schunk_canopen_driver/schunk_canopen_driver_move_home_node __name:=schunk_canopen_node __log:=/home/hannes/.ros/log/6293405a-4860-11e8-ba26-c1e99b4db0b3/schunk_canopen_node-2.log].
+log file: /home/hannes/.ros/log/6293405a-4860-11e8-ba26-c1e99b4db0b3/schunk_canopen_node-2*.log[0m
+^C[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m
+]0;hannes@hannes-Aspire-E1-572G: ~/catkin_ws/schunk_canopen_driver/launch[01;32mhannes@hannes-Aspire-E1-572G[00m:[01;34m~/catkin_ws/schunk_canopen_driver/launch[00m$ roslaunch  /home/hannes/catkin_ws/schunk_canopen_driver/launch/move_to_home_position.launchh [A[A]0;hannes@hannes-Aspire-E1-572G: ~/catkin_ws/schunk_canopen_driver/launch[01;32mhannes@hannes-Aspire-E1-572G[00m:[01;34m~/catkin_ws/schunk_canopen_driver/launch[00m$ [5Pexit
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Croslaunch  /home/hannes/catkin_ws/schunk_canopen_driver/launch/move_to_home_position.launchh [A[A]0;hannes@hannes-Aspire-E1-572G: ~/catkin_ws/schunk_canopen_driver/launch[01;32mhannes@hannes-Aspire-E1-572G[00m:[01;34m~/catkin_ws/schunk_canopen_driver/launch[00m$ [5Pexit
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+exit
+
+Skript beendet: Mi 25 Apr 2018 10:13:50 CEST

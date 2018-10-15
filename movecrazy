@@ -1,0 +1,16 @@
+rostopic pub -1 /myrob/pos_based_pos_traj_controller_arm/command trajectory_msgs/JointTrajectory "header: 
+  seq: 0
+  stamp: 
+    secs: 0
+    nsecs: 0
+  frame_id: ''
+joint_names: ['arm_1_joint', 'arm_2_joint', 'arm_3_joint', 'arm_4_joint', 'arm_5_joint', 'arm_6_joint']
+points: 
+  - 
+    positions: [0.8,-0.8, 0.8, 0, 0, 0]
+    velocities: []
+    accelerations: []
+    effort: []
+    time_from_start: 
+      secs: 2
+      nsecs: 990099009" --once

@@ -132,14 +132,15 @@ void SchunkPowerBallNode::commutationSearch()
     // Make sure, the node is in interpolated position mode and enabled
   }
 
-  size_t counter = 50;
+  size_t counter = 500;
 
   // Try commutation search for counter times
   while (!calib_ok && counter--)
   {
-    usleep(100000); // sleep for 100 ms
+    //usleep(100000); // sleep for 100 ms
+        sendSync(m_can_dev);
     downloadPDOs();
-    sendSync(m_can_dev);
+    
     uploadPDOs();
     calib_ok = CommutationCalibrated();
   }

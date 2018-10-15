@@ -14,14 +14,14 @@ hardware_interface:
 
 # Publish all joint states ----------------------------------
 joint_state_controller:
-   type:         joint_state_controller/JointStateController
+   type: joint_state_controller/JointStateController
    publish_rate: 50
 
 # Joint Trajectory Controller - position based -------------------------------
 # For detailed explanations of parameter see http://wiki.ros.org/joint_trajectory_controller
 pos_based_pos_traj_controller_arm:
    type: position_controllers/JointTrajectoryController
-   publish_rate: 50
+   publish_rate: 100
    joints:
      - arm_1_joint
      - arm_2_joint
@@ -29,3 +29,6 @@ pos_based_pos_traj_controller_arm:
      - arm_4_joint
      - arm_5_joint
      - arm_6_joint
+
+#allow_partial_joints_goal: true
+#hannes: allow to just move one joint

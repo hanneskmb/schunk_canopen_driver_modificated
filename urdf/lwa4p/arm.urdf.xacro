@@ -1,9 +1,20 @@
 <?xml version="1.0"?>
-<robot name="arm" xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+<robot name="myrob" xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
        xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
        xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
        xmlns:xacro="http://ros.org/wiki/xacro">
   
+<!--hannes: URI adresses are not correct--> 
+
+
+<!-- gazebo_plugin for arm Hannes change
+<gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+     </plugin>
+</gazebo>
+-->
+
+
   <link name="base_link">
     <origin rpy="0 0 0" xyz="0 0 0"/>
   </link>
@@ -22,4 +33,7 @@
       <xacro:property name="arm_5_ref" value="2.1" />
       <xacro:property name="arm_6_ref" value="2.1" />
   </xacro:schunk_lwa4p>
+
+
 </robot>
+

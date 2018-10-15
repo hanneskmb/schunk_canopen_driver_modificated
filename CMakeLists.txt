@@ -27,7 +27,8 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   std_srvs
   urdf
-)
+  gazebo_ros  #add hannes
+ )
 
 
 
@@ -127,6 +128,7 @@ catkin_package(
     roscpp
     std_srvs
   DEPENDS
+gazebo_ros #added hannes
 )
 
 ###########

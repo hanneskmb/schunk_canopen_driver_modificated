@@ -52,8 +52,9 @@
   <build_depend>std_msgs</build_depend>
   <build_depend>std_srvs</build_depend>
   <build_depend>urdf</build_depend>
+<build_depend>gazebo_ros</build_depend> <!-- added hannes -->
 
-
+<run_depend>gazebo_ros</run_depend>    <!-- added hannes -->
   <run_depend>actionlib</run_depend>
   <run_depend>control_msgs</run_depend>
   <run_depend>controller_manager</run_depend>

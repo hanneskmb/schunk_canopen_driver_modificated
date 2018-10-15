@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-<robot>
+<robot name="myrob" xmlns:xacro="http://www.ros.org/wiki/xacro">
+        <!-- Put here the robot description -->
+
+
 
   <material name="Schunk/LightGrey">
     <color rgba="0.7 0.7 0.7 1.0"/>

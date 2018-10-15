@@ -1,7 +1,16 @@
 <?xml version="1.0"?>
-<robot xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="myrob" xmlns:xacro="http://ros.org/wiki/xacro">
 
   <xacro:macro name="schunk_lwa4p_gazebo" params="name">
+
+
+<!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+<robotNamespace>/myrob</robotNamespace>
+    </plugin>
+  </gazebo>
+
 
     <gazebo reference="${name}_0_link">
       <gravity>true</gravity>
